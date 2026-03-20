@@ -88,6 +88,7 @@ CREATE TABLE public.bookings (
 -- Booking Line Items
 CREATE TABLE public.booking_line_items (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    tenant_id UUID NOT NULL REFERENCES public.tenants(id) ON DELETE CASCADE,
     booking_id UUID NOT NULL REFERENCES public.bookings(id) ON DELETE CASCADE,
     inventory_item_id UUID NOT NULL REFERENCES public.inventory_items(id),
     quantity INTEGER DEFAULT 1 NOT NULL,
