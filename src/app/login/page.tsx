@@ -20,7 +20,7 @@ export default async function LoginPage({
             Enter your email below to login to your account.
           </CardDescription>
         </CardHeader>
-        <form>
+        <form action={login}>
           <CardContent className="grid gap-4">
             <div className="grid gap-2">
               <Label htmlFor="email">Email</Label>
@@ -35,7 +35,7 @@ export default async function LoginPage({
             )}
           </CardContent>
           <CardFooter className="flex flex-col gap-2">
-            <Button type="submit" className="w-full" formAction={login}>Sign In</Button>
+            <Button type="submit" className="w-full">Sign In</Button>
             <Button type="submit" variant="outline" className="w-full" formAction={signup}>Sign Up</Button>
           </CardFooter>
         </form>
