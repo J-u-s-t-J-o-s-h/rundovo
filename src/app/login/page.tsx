@@ -35,8 +35,8 @@ export default async function LoginPage({
             )}
           </CardContent>
           <CardFooter className="flex flex-col gap-2">
-            <Button className="w-full" formAction={login}>Sign In</Button>
-            <Button variant="outline" className="w-full" formAction={signup}>Sign Up</Button>
+            <Button type="submit" className="w-full" formAction={login}>Sign In</Button>
+            <Button type="submit" variant="outline" className="w-full" formAction={signup}>Sign Up</Button>
           </CardFooter>
         </form>
       </Card>
